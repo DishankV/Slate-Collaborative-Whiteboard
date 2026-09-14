@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  @apply bg-graphite-950 text-graphite-900 antialiased;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Visible keyboard focus everywhere, without an outline on mouse clicks */
+:focus-visible {
+  outline: 2px solid #E8734A;
+  outline-offset: 2px;
+}
+
+.thin-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+.thin-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #4A4C56;
+  border-radius: 999px;
+}
+.thin-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+canvas {
+  touch-action: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
